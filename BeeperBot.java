@@ -12,7 +12,24 @@ public class BeeperBot extends Robot
     }
     
     public void runRace() {
-        
+        while(frontIsClear()){
+            move();
+            checkSteeple();
+        }
     }
-   
+    public void checkSteeple() {
+        if(nextToABeeper()){
+            turnLeft();
+            while(nextToABeeper()){
+                pickBeeper();
+                move();
+            }
+            turnLeft();
+            turnLeft();
+            while(frontIsClear()){
+                move();
+            }
+            turnLeft();
+        }
+    }
 }
