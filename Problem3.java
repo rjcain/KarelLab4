@@ -23,9 +23,6 @@ public class Problem3 extends Problem1
         while(!nextToABeeper()) {
             checkWalls();
         }
-        
     }
-   
-   
 }
 
